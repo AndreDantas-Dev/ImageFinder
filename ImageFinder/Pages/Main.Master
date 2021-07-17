@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ImageFinder.Pages.Main" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- ImageFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <script type="text/javascript" src="~/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery-341.min.js"></script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <i class="fa fa-image" style="font-size: 32px; color: white; margin-top: 9px"></i>ImageFinder
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <asp:ContentPlaceHolder ID="PageContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer id="footer">
+            <p><%= Eval(DateTime.Now.Year.ToString()) %> - André Dantas</p>
+        </footer>
+    </div>
+</body>
+</html>
