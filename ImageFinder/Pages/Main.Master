@@ -14,10 +14,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark justify-content-between navbar-fixed-top">
         <div class="container">
-            <span class="navbar-brand mb-0"><i class="fa fa-image d-inline-block align-top" style="font-size: 32px; color: white;"></i>&nbsp;ImageFinder
+            <span class="navbar-brand mb-0"><i class="fa fa-inverse fa-image d-inline-block align-top" style="font-size: 32px;"></i>&nbsp; <a class="navbar-brand" href="Home.aspx">ImageFinder</a>
             </span>
+            <asp:ContentPlaceHolder ID="Navbar" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
     </nav>
     <div class="container body-content">
