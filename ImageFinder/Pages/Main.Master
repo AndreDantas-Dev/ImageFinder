@@ -14,21 +14,23 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark justify-content-between navbar-fixed-top">
-        <div class="container">
-            <span class="navbar-brand mb-0"><i class="fa fa-inverse fa-image d-inline-block align-top" style="font-size: 32px;"></i>&nbsp; <a class="navbar-brand" href="Home.aspx">ImageFinder</a>
-            </span>
-            <asp:ContentPlaceHolder ID="Navbar" runat="server">
+    <form runat="server">
+        <nav class="navbar navbar-dark bg-dark justify-content-between navbar-fixed-top">
+            <div class="container">
+                <span class="navbar-brand mb-0"><i class="fa fa-inverse fa-image d-inline-block align-top" style="font-size: 32px;"></i>&nbsp; <a class="navbar-brand" href="Home.aspx">ImageFinder</a>
+                </span>
+                <asp:ContentPlaceHolder ID="Navbar" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="PageContent" runat="server">
             </asp:ContentPlaceHolder>
+            <footer id="footer" class="bg-dark">
+                <p><% Response.Write(DateTime.Now.Year.ToString()); %> - André Dantas</p>
+            </footer>
         </div>
-    </nav>
-    <div class="container body-content">
-        <asp:ContentPlaceHolder ID="PageContent" runat="server">
-        </asp:ContentPlaceHolder>
-        <footer id="footer" class="bg-dark">
-            <p><% Response.Write(DateTime.Now.Year.ToString()); %> - André Dantas</p>
-        </footer>
-    </div>
+    </form>
     <script type="text/javascript" src="/Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-3.4.1.min.js"></script>
 </body>

@@ -17,6 +17,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 64px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists
@@ -36,10 +37,38 @@
     object-fit: contain;
 }
 
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.GridViewStyle {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.HeaderStyle {
+    border: 1px, solid, #ddd;
+    background-color: #212529;
+    
+}
+
+    .HeaderStyle th {
+        padding: 5px 0px 5px 0px;
+        color: white;
+        text-align: center;
+    }
+
+tr.RowStyle {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+tr.AlternatingRowStyle {
+    text-align: center;
+    background-color: #e8e8e8;
 }

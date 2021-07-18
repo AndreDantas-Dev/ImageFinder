@@ -29,9 +29,12 @@ namespace ImageFinder.Models
             }
         }
 
-        public static bool IsUrlValid(string url)
+        public static Uri GetUriFromImgSrc(string src)
         {
-            return Uri.TryCreate(url, UriKind.Absolute, out Uri uriResult) && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+            if (Uri.TryCreate(src, UriKind.Absolute, out Uri uriResult))
+                return uriResult;
+
+            return null;
         }
     }
 }
