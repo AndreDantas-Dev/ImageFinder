@@ -33,6 +33,15 @@ namespace ImageFinder.Pages
         protected global::System.Web.UI.WebControls.Button btnSearch;
 
         /// <summary>
+        /// welcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl welcome;
+
+        /// <summary>
         /// main control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ImageFinder.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl main;
+
+        /// <summary>
+        /// result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl result;
 
         /// <summary>
         /// grdWords control.

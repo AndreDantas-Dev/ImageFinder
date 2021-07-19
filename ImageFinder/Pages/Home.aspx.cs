@@ -29,6 +29,7 @@ namespace ImageFinder.Pages
 
             if (document != null)
             {
+                welcome.Visible = false;
                 main.Visible = true;
                 LoadImagesFromHtmlDocument(document, url);
                 RankPageWords(HttpUtility.HtmlDecode(document.DocumentNode.InnerText));
@@ -94,6 +95,7 @@ namespace ImageFinder.Pages
 
         public void ClearPage()
         {
+            welcome.Visible = true;
             main.Visible = false;
         }
     }

@@ -11,28 +11,33 @@
 </asp:Content>
 
 <asp:Content ID="body" ContentPlaceHolderID="PageContent" runat="server">
+    <div id="welcome" runat="server" class="home-header fill-height">
+        Search for images on the internet by searching the URL
+    </div>
     <div id="main" runat="server" class="container">
-        <h1 class="text-center p-4" runat="server">Top Words</h1>
-        <div class="row">
-            <div class="col-lg-12">
-                <asp:GridView runat="server" ID="grdWords" AutoGenerateColumns="false" Width="100%" CssClass="GridViewStyle">
-                    <HeaderStyle CssClass="HeaderStyle" />
-                    <RowStyle CssClass="RowStyle" />
-                    <AlternatingRowStyle CssClass="AlternatingRowStyle" />
-                    <Columns>
-                        <asp:BoundField DataField="Key" HeaderText="Word" HeaderStyle-Width="50%" />
-                        <asp:BoundField DataField="Value" HeaderText="Occurrences" HeaderStyle-Width="50%" />
-                    </Columns>
-                </asp:GridView>
-            </div>
-        </div>
-        <h1 class="text-center p-4">Images Found</h1>
-        <asp:DataList runat="server" ID="grdImages" RepeatColumns="5" RepeatDirection="Vertical" CellPadding="10">
-            <ItemTemplate>
-                <div class="image-div">
-                    <asp:Image runat="server" ID="imgSearch" ImageUrl='<%#Eval("src")%>' CssClass="image-display" />
+        <div id="result" runat="server">
+            <h1 class="text-center p-4" runat="server">Top Words</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <asp:GridView runat="server" ID="grdWords" AutoGenerateColumns="false" Width="100%" CssClass="GridViewStyle">
+                        <HeaderStyle CssClass="HeaderStyle" />
+                        <RowStyle CssClass="RowStyle" />
+                        <AlternatingRowStyle CssClass="AlternatingRowStyle" />
+                        <Columns>
+                            <asp:BoundField DataField="Key" HeaderText="Word" HeaderStyle-Width="50%" />
+                            <asp:BoundField DataField="Value" HeaderText="Occurrences" HeaderStyle-Width="50%" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
-            </ItemTemplate>
-        </asp:DataList>
+            </div>
+            <h1 class="text-center p-4">Images Found</h1>
+            <asp:DataList runat="server" ID="grdImages" RepeatColumns="5" RepeatDirection="Vertical" CellPadding="10">
+                <ItemTemplate>
+                    <div class="image-div">
+                        <asp:Image runat="server" ID="imgSearch" ImageUrl='<%#Eval("src")%>' CssClass="image-display" />
+                    </div>
+                </ItemTemplate>
+            </asp:DataList>
+        </div>
     </div>
 </asp:Content>
